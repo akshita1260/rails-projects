@@ -1,0 +1,27 @@
+<h1>New User Registration</h1>
+<% flash[:notice] %>
+
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </div>
+
+  <div>
+  <%= form.label :password %><br>
+  <%= form.text_area :password %>
+  </div>
+
+
+  <div>
+    <%= form.submit :register %>
+  </div>
+
+  <%= link_to "User Login", root_path%>
+
+<% end %>
